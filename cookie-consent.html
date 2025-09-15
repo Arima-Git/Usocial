@@ -1,0 +1,358 @@
+<!-- Cookie Consent Popup -->
+<div id="cookieConsentPopup" class="cookie-consent-overlay">
+    <div class="cookie-consent-popup">
+        <!-- Close button -->
+        <button class="close-button" onclick="hideCookiePopup()">
+            <img src="assets/images/cross.png" alt="Close">
+        </button>
+
+        <!-- Logo and Title -->
+        <div class="cookie-header">
+            <img src="assets/images/ulo.png" alt="üLO Logo" class="cookie-logo">
+            <h2>ÜLO Cookie Settings</h2>
+        </div>
+
+        <!-- Scrollable Policy Text -->
+        <div class="cookie-policy-text">
+            <p>We use cookies to improve your experience, personalize content and analyze our traffic. Some cookies are necessary for the website to function, while others help us understand how you interact with our site and provide tailored advertising. By clicking "Accept All" you consent to our use of all cookies as per our <a href="cookies-policy.html">Cookies Policy</a>. Similarly by continuing to browse this website (by clicking the 'x' without clicking 'accept all') you agree to our <a href="cookies-policy.html">Cookies Policy</a>.</p>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="cookie-buttons">
+            <button class="reject-button" onclick="rejectCookies()">Reject All</button>
+            <button class="accept-button" onclick="acceptCookies()">Accept All</button>
+
+        </div>
+
+        <!-- Language Selector -->
+        <div class="col-12 col-sm-2 col-lg-2 text-center text-sm-end">
+            <div class="language-selector dropdown">
+                <button class="dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    <div class="btn-grid">
+                        <div class="icon-cell">
+                            <img src="assets/images/flags/globe.png" alt="Globe icon" class="globe-icon">
+                        </div>
+                        <div class="text-cell">
+                            <span>English</span>
+                        </div>
+                    </div>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                    <li><button class="dropdown-item" data-lang="en">
+                        <div class="btn-grid">
+                            <div class="icon-cell">
+                                <img src="assets/images/flags/globe.png" alt="Globe icon">
+                            </div>
+                            <div class="text-cell">
+                                <span>English</span>
+                            </div>
+                        </div>
+                    </button></li>
+                    <li><button class="dropdown-item" data-lang="zh-CN">
+                        <div class="btn-grid">
+                            <div class="icon-cell">
+                                <img src="assets/images/flags/Chinese.png" alt="Chinese">
+                            </div>
+                            <div class="text-cell">
+                                <span>普通话</span>
+                            </div>
+                        </div>
+                    </button></li>
+                    <li><button class="dropdown-item" data-lang="hi">
+                        <div class="btn-grid">
+                            <div class="icon-cell">
+                                <img src="assets/images/flags/Hindi.png" alt="Hindi">
+                            </div>
+                            <div class="text-cell">
+                                <span>हिंदी</span>
+                            </div>
+                        </div>
+                    </button></li>
+                    <li><button class="dropdown-item" data-lang="ja">
+                        <div class="btn-grid">
+                            <div class="icon-cell">
+                                <img src="assets/images/flags/Japanese.png" alt="Japanese">
+                            </div>
+                            <div class="text-cell">
+                                <span>日本語</span>
+                            </div>
+                        </div>
+                    </button></li>
+                    <li><button class="dropdown-item" data-lang="es">
+                        <div class="btn-grid">
+                            <div class="icon-cell">
+                                <img src="assets/images/flags/Spanish.png" alt="Spanish">
+                            </div>
+                            <div class="text-cell">
+                                <span>Español</span>
+                            </div>
+                        </div>
+                    </button></li>
+                    <li><button class="dropdown-item" data-lang="fr">
+                        <div class="btn-grid">
+                            <div class="icon-cell">
+                                <img src="assets/images/flags/French.png" alt="French">
+                            </div>
+                            <div class="text-cell">
+                                <span>Français</span>
+                            </div>
+                        </div>
+                    </button></li>
+                    <li><button class="dropdown-item" data-lang="pt">
+                        <div class="btn-grid">
+                            <div class="icon-cell">
+                                <img src="assets/images/flags/portugues.png" alt="Portuguese">
+                            </div>
+                            <div class="text-cell">
+                                <span>Português</span>
+                            </div>
+                        </div>
+                    </button></li>
+                    <li><button class="dropdown-item" data-lang="ko">
+                        <div class="btn-grid">
+                            <div class="icon-cell">
+                                <img src="assets/images/flags/koriean.png" alt="Korean">
+                            </div>
+                            <div class="text-cell">
+                                <span>한국인</span>
+                            </div>
+                        </div>
+                    </button></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* Cookie Consent Popup Styles */
+.cookie-consent-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.cookie-consent-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cookie-consent-popup {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    font-family: 'Outfit', sans-serif;
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.close-button img {
+    width: 24px;
+    height: 24px;
+}
+
+.cookie-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cookie-logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.cookie-header h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    color: #333;
+}
+
+.cookie-policy-text {
+    max-height: 150px;
+    overflow-y: auto;
+    margin-bottom: 25px;
+    padding: 10px 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.cookie-policy-text::-webkit-scrollbar {
+    width: 8px;
+}
+
+.cookie-policy-text::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.cookie-policy-text::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.cookie-policy-text a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.cookie-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.cookie-buttons button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    min-width: 140px;
+    transition: transform 0.2s ease;
+}
+
+.cookie-buttons button:hover {
+    transform: translateY(-2px);
+}
+
+.reject-button {
+    background-color: #E74C3C;
+    color: white;
+}
+
+.accept-button {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Mobile Styles */
+@media (max-width: 576px) {
+    .cookie-consent-popup {
+        padding: 20px;
+        width: 95%;
+        margin: 15px;
+    }
+
+    .cookie-buttons {
+        flex-direction: column;
+    }
+
+    .cookie-buttons button {
+        width: 100%;
+    }
+
+    .cookie-header h2 {
+        font-size: 20px;
+    }
+
+    .cookie-policy-text {
+        font-size: 13px;
+        max-height: 120px;
+    }
+}
+</style>
+
+<script>
+// Check if user has already made a choice
+function hasUserMadeChoice() {
+    // Check both cookie and session storage
+    const cookieConsent = document.cookie.split(';').find(item => item.trim().startsWith('cookieConsent='));
+    const sessionConsent = sessionStorage.getItem('cookieConsent');
+    return cookieConsent || sessionConsent !== null;
+}
+
+// Show cookie popup if no choice has been made
+function showCookiePopup() {
+    // Show popup if no choice has been made
+    if (!hasUserMadeChoice()) {
+        document.getElementById('cookieConsentPopup').classList.add('show');
+    }
+}
+
+// Hide cookie popup
+function hideCookiePopup() {
+    document.getElementById('cookieConsentPopup').classList.remove('show');
+}
+
+// Set cookie with expiry
+function setCookie(name, value, days) {
+    const date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    const expires = "; expires=" + date.toUTCString();
+    document.cookie = name + "=" + value + expires + "; path=/";
+}
+
+// Accept cookies
+function acceptCookies() {
+    // Set persistent cookie for accepted state
+    setCookie('cookieConsent', 'accepted', 365);
+    // Clear any session storage
+    sessionStorage.removeItem('cookieConsent');
+    hideCookiePopup();
+}
+
+// Reject cookies
+function rejectCookies() {
+    // Store rejection in session storage only
+    sessionStorage.setItem('cookieConsent', 'rejected');
+    // Set a session cookie (expires when browser closes)
+    document.cookie = 'cookieConsent=rejected; path=/';
+    hideCookiePopup();
+}
+
+// Load cookie policy text
+async function loadCookiePolicy() {
+    try {
+        const response = await fetch('/cookie-policy.html');
+        const text = await response.text();
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(text, 'text/html');
+        const policyText = doc.querySelector('main').textContent;
+        document.querySelector('.cookie-policy-text').textContent = policyText;
+    } catch (error) {
+        console.error('Error loading cookie policy:', error);
+    }
+}
+
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    showCookiePopup();
+    // Uncomment the line below if you want to load policy text dynamically
+    // loadCookiePolicy();
+});
+</script>
+
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+<!-- Custom JS -->
+<script src="assets/js/legal-translate.js"></script>
+</body>
+</html> 
