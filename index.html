@@ -21,7 +21,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/post-index.css">
 
     <!-- Define the Google Translate function first -->
     <script type="text/javascript">
@@ -72,128 +72,217 @@
     <!-- Header Section -->
     <header>
         <div class="container">
-            <div class="row align-items-center mb-4">
-                <div class="col-12">
-                    <div class="header-content">
-                        <div class="logo-container">
-                            <img src="assets/images/logo.png" class="logo">
-                        </div>
-                        <div class="title-container">
-                            <h2 class="main-title">The New <span class="caps">Friendship</span> & <span class="caps">Dating</span> Socials App</h2>
-                            <p class="sub-title">With a Highly Anticipated Release in 2025!</p>
-                        </div>
+            <div class="row mb-2 align-items-center justify-content-center">
+                <div class="col-12 d-flex flex-row align-items-center justify-content-center flex-wrap header-flex-row">
+                    <a href="index.html" class="logo-link me-3" style="flex-shrink:0;">
+                        <img src="assets/images/logo.png" alt="üLO" class="logo-img" style="margin-top:0;">
+                    </a>
+                    <div class="header-text-group text-start">
+                        <h2 class="main-title mb-1" style="margin-top:0;">Friendship & Dating Socials App</h2>
+                        <p class="sub-title mb-0">Make Real Connections Through Real Conversations!</p>
                     </div>
                 </div>
             </div>
-
-            <!-- Language Selection -->
-            <div class="language-selector">
-                <button class="lang-btn notranslate" data-lang="en" translate="no">
-                    <img src="assets/images/flags/globe.png"><span><b>English</b></span>
-                </button>
-                <button class="lang-btn notranslate" data-lang="zh-CN" translate="no">
-                    <img src="assets/images/flags/Chinese.png" alt="Chinese"><span><b>普通话</b></span>
-                </button>
-                <button class="lang-btn notranslate" data-lang="hi" translate="no">
-                    <img src="assets/images/flags/Hindi.png" alt="Hindi"><span><b>हिंदी</b></span>
-                </button>
-                <button class="lang-btn notranslate" data-lang="ja" translate="no">
-                    <img src="assets/images/flags/Japanese.png" alt="Japanese"><span><b>日本語</b></span>
-                </button>
-                <button class="lang-btn notranslate" data-lang="es" translate="no">
-                    <img src="assets/images/flags/Spanish.png" alt="Spanish"><span><b>Español</b></span>
-                </button>
-                <button class="lang-btn notranslate" data-lang="fr" translate="no">
-                    <img src="assets/images/flags/French.png" alt="French"><span><b>Français</b></span>
-                </button>
-                <button class="lang-btn notranslate" data-lang="pt" translate="no">
-                    <img src="assets/images/flags/portugues.png" alt="Portuguese"><span><b>Português</b></span>
-                </button>
-                <button class="lang-btn notranslate" data-lang="ko" translate="no">
-                    <img src="assets/images/flags/koriean.png" alt="Korean"><span><b>한국인</b></span>
-                </button>
-            </div>        </div>
+            <div class="row mb-4">
+                <div class="col-12 d-flex justify-content-center">
+                    <!-- Language Selection -->
+                    <div class="language-selector" style="margin-top: 20px !important;">
+                        <button class="lang-btn notranslate" data-lang="en" translate="no">
+                            <img src="assets/images/flags/globe.png"><span><b>English</b></span>
+                        </button>
+                        <button class="lang-btn notranslate" data-lang="zh-CN" translate="no">
+                            <img src="assets/images/flags/Chinese.png" alt="Chinese"><span><b>普通话</b></span>
+                        </button>
+                        <button class="lang-btn notranslate" data-lang="hi" translate="no">
+                            <img src="assets/images/flags/Hindi.png" alt="Hindi"><span><b>हिंदी</b></span>
+                        </button>
+                        <button class="lang-btn notranslate" data-lang="ja" translate="no">
+                            <img src="assets/images/flags/Japanese.png" alt="Japanese"><span><b>日本語</b></span>
+                        </button>
+                        <button class="lang-btn notranslate" data-lang="es" translate="no">
+                            <img src="assets/images/flags/Spanish.png" alt="Spanish"><span><b>Español</b></span>
+                        </button>
+                        <button class="lang-btn notranslate" data-lang="fr" translate="no">
+                            <img src="assets/images/flags/French.png" alt="French"><span><b>Français</b></span>
+                        </button>
+                        <button class="lang-btn notranslate" data-lang="pt" translate="no">
+                            <img src="assets/images/flags/portugues.png" alt="Portuguese"><span><b>Português</b></span>
+                        </button>
+                        <button class="lang-btn notranslate" data-lang="ko" translate="no">
+                            <img src="assets/images/flags/koriean.png" alt="Korean"><span><b>한국인</b></span>
+                        </button>
+                    </div>
+                </div>
+                        </div>
+                        </div>
     </header>
 
     <!-- Main Content -->
     <main>
-        <!-- Carousel Section -->
-        <section class="carousel-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="carousel-container">
-                            <div class="carousel" id="carousel1">
-                                <!-- Images will be loaded dynamically from assets/images/carousel1/ -->
+        <!-- Carousel and Main Content Section -->
+        <div class="container">
+            <div class="row">
+                <div class="about-ulo-section mb-4">
+                    <button class="about-dropdown-btn" type="button" onclick="document.getElementById('aboutDropdownContent').classList.toggle('show')">
+                        About ÜLO <img src="assets/images/dropdown.png" alt="Dropdown arrow" style="max-width: 18px; height: auto; vertical-align: middle; margin-left: 6px;">
+                    </button>
+                    <div class="about-dropdown-content" id="aboutDropdownContent">
+                        <p>Welcome to ÜLO! We aim to offer a world of Friendship and Dating opportunities. Our goal is to combat loneliness by enabling people of a broad age span from across the world to have real conversations. We want to give you the opportunity to connect with people from around the world you would have never ordinarily met. Imagine meeting your new best friend or the love of your life! ÜLO has a strong culture of respect and friendliness, and a strict no nudity and no abusive language policy. Our core values are social connection, inclusion, diversity, harmony, and enjoying life! We want ÜLO to be a platform where people can talk, share experiences, laugh, be kind, embrace diversity, and learn from each other.</p>
+                    </div>
+                </div>        
                             </div>
-                            <div class="carousel" id="carousel2">
+
+
+
+ 
+            <div class="row">
+                <!-- Left Column: About ÜLO, Carousels -->
+                <div class="col-lg-4">
+                    <div class="carousel-section-left mb-4">
+                        <div class="carousel-stack">
+                            <div class="carousel" id="carousel1">
                                 <!-- Images will be loaded dynamically from assets/images/carousel2/ -->
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Email Registration and App Store Section -->
-        <section class="registration-store-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-lg-6">
-                        <!-- Email Registration -->
-                        <div class="email-section">
-                            <h3 class="registration-title">Register To Receive Your 1st Month Premium Membership FREE On App Store Release:</h3>
-                            <form class="email-form" novalidate>
-                                <div class="input-group">
-                                    <div class="input-size">
-                                    <input type="email" class="form-control" placeholder="Enter Your Email" id="emailInput" required>
-                                    </div>
-                                    <div class="button-size">
-                                    <button type="submit" class="btn btn-primary" id="submitEmail">Get My Free Premium Trial</button>
-                                    </div>
+                <!-- Right Column: Phone Grid -->
+                <div class="col-lg-8">
+                    <div class="phone-showcase-right">
+                        <!-- First Row: Text above images -->
+                        <div class="row mb-4 phone-row-first">
+                            <div class="col-6 col-md-2 text-center mb-4">
+                                <div class="phone-title">Welcome<br> to ÜLO</div>
+                                <div class="phone-mockup mb-2">
+                                    <img src="assets/images/PostLaunch/phone1.png" alt="Welcome To ÜLO" class="img-fluid">
                                 </div>
-                                <div class="message-container">
-                                    <div id="emailError" class="error-message"></div>
-                                    <div id="emailSuccess" class="success-message"></div>
+                            </div>
+                            <div class="col-6 col-md-2 text-center mb-4">
+                                <div class="phone-title">8 In-App <br> Languages</div>
+                                <div class="phone-mockup mb-2">
+                                    <img src="assets/images/PostLaunch/phone2.png" alt="8 In-App Languages" class="img-fluid">
                                 </div>
-                                <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="termsCheck" required>
-                                    <label class="form-check-label" for="termsCheck">
-                                        I agree to <strong>ÜLO's</strong> <a href="terms-conditions.html">Terms & Conditions</a> and receiving direct marketing material as per <strong>ÜLO's</strong> full <a href="privacy-policy.html">Privacy Policy</a>.
-                                    </label>
-                                </div>
-                            </form>
+                            </div>
+                            <div class="col-6 col-md-2 text-center mb-4">
+                                <div class="phone-title">Join Our <br>Community</div>
+                                <div class="phone-mockup mb-2">
+                                    <img src="assets/images/PostLaunch/phone3.png" alt="Join Our Community" class="img-fluid">
                         </div>
-                    </div>
-                    <div class="col-12 col-lg-6">
-                        <!-- App Store Buttons -->
-                        <div class="app-store-section">
-                            <a href="#" class="store-btn">
-                                <img src="assets/images/appstore.png" alt="Download on App Store" class="img-fluid">
-                            </a>
-                            <a href="#" class="store-btn">
-                                <img src="assets/images/googleplay.png" alt="Get it on Google Play" class="img-fluid">
-                            </a>
+                            </div>
+                            <div class="col-6 col-md-2 text-center mb-4">
+                                <div class="phone-title">Select Social <br> Preferences</div>
+                                <div class="phone-mockup mb-2">
+                                    <img src="assets/images/PostLaunch/phone4.png" alt="Easily Select Your Social Preferences" class="img-fluid">
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-2 text-center mb-4">
+                                <div class="phone-title">Dating & <br>Friendship</div>
+                                <div class="phone-mockup mb-2">
+                                    <img src="assets/images/PostLaunch/phone5.png" alt="Dating & Friendship" class="img-fluid">
+                        </div>
+                            </div>
+                            <div class="col-6 col-md-2 text-center mb-4">
+                                <div class="phone-title">View Hobbies <br>& Languages</div>
+                                <div class="phone-mockup mb-2">
+                                    <img src="assets/images/PostLaunch/phone6.png" alt="View Photos, Hobbies and Languages" class="img-fluid">
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+            <div class="row">
+                    <!-- Left Column: About ÜLO, Carousels -->
+                    <div class="col-lg-4">
+                        <div class="carousel-section-left mb-4">
+                            <div class="carousel-stack">
+                                <div class="carousel" id="carousel2">
+                                    <!-- Images will be loaded dynamically from assets/images/carousel1/ -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right Column: Phone Grid -->
+                    <div class="col-lg-8">
+                        <div class="phone-showcase-right">
+                            <!-- First Row: Text above images -->
+                            <div class="row mb-4 phone-row-second">
 
-    <!-- Footer -->
+                                <div class="col-6 col-md-2 text-center mb-4">
+                                    <div class="phone-mockup mb-2">
+                                        <img src="assets/images/PostLaunch/phone7.png" alt="Chat and Share Photos" class="img-fluid">
+                                    </div>
+                                    <div class="phone-title">Text Chat</div>
+                                </div>
+                                <div class="col-6 col-md-2 text-center mb-4">
+                                    <div class="phone-mockup mb-2">
+                                        <img src="assets/images/PostLaunch/phone8.png" alt="Video Chat" class="img-fluid">
+                                    </div>
+                                    <div class="phone-title">Video Chat</div>
+                                </div>
+                                <div class="col-6 col-md-2 text-center mb-4">
+                                    <div class="phone-mockup mb-2">
+                                        <img src="assets/images/PostLaunch/phone9.png" alt="All Ages Over 18 Very Welcome!" class="img-fluid">
+                                    </div>
+                                    <div class="phone-title">All Ages Over 18 <br> Very Welcome!</div>
+                                </div>
+                                <div class="col-6 col-md-2 text-center mb-4">
+                                    <div class="phone-mockup mb-2">
+                                        <img src="assets/images/PostLaunch/phone10.png" alt="Stay Connected" class="img-fluid">
+                                    </div>
+                                    <div class="phone-title">Stay Connected</div>
+                                </div>
+                                <div class="col-6 col-md-2 text-center mb-4">
+                                    <div class="phone-mockup mb-2">
+                                        <img src="assets/images/PostLaunch/phone11.png" alt="Jump Straight Into Random Chats" class="img-fluid">
+                                    </div>
+                                    <div class="phone-title">Jump Straight Into <br> Random Chats</div>
+                                </div>
+                                <div class="col-6 col-md-2 text-center mb-4">
+                                    <div class="phone-mockup mb-2">
+                                        <img src="assets/images/PostLaunch/phone12.png" alt="Show Your Interest With Flowers" class="img-fluid">
+                    </div>
+                                    <div class="phone-title">Show Your Interest <br> With Flowers</div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+
+                <!-- Download Buttons Row (spanning both columns) -->
+                <div class="row">
+                    <div class="col-lg-4 d-flex justify-content-center align-items-center">
+                        <div class="app-store-section justifty-content-center align-items-center" style="margin-top: 0px !important;">
+                            <a href="#" class="store-btn"><img src="assets/images/appstore.png" alt="Download on App Store" class="img-fluid"></a>
+                            <a href="#" class="store-btn"><img src="assets/images/googleplay.png" alt="Get it on Google Play" class="img-fluid"></a>
+                    </div>
+                    </div>
+                    <div class="col-lg-9"></div>
+                </div>
+
+
     <footer class="policy-footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-links">
-                    <a href="terms-conditions.html" class="footer-link">Terms & Conditions</a>
-                    <a href="cookie-policy.html" class="footer-link">Cookies Policy</a>
-                    <a href="privacy-policy.html" class="footer-link">Privacy Policy</a>
+                    <div class="footer-row">
+                        <div class="footer-links">
+                            <a href="full-terms-andconditions.html" class="footer-link" style="text-decoration: none !important;">Terms & Conditions</a>
+                            <a href="cookie-policy.html" class="footer-link" style="text-decoration: none !important;">Cookies Policy</a>
+                            <a href="privacy-policy.html" class="footer-link" style="text-decoration: none !important;">Privacy Policy</a>
+                            <a href="safety-tips.html" class="footer-link" style="text-decoration: none !important;">Safety Tips & Scam Awareness</a>
+                            <a href="contact-us.html" class="footer-link" style="text-decoration: none !important;">Contact Us</a>
+                        </div>
+                        <span class="footer-text">All photos are of models (not actual ÜLO users) and are for marketing and illustrative purposes only.</span>
+                    </div>
+                    <div class="footer-copyright">
+                        <small class="copyright-text">&copy; All Rights Reserved Universal Star Pty Ltd</small>
+                    </div>
                 </div>
-                <p class="footer-text">All photos are of models (not actual ÜLO users) and are for marketing purposes only.</p>
-            </div>
+            </footer>
         </div>
-    </footer>
+        
+    
+    <!-- Footer -->
 
     <!-- Cookie Consent Popup -->
     <div id="cookieConsentPopup" class="cookie-consent-overlay">
@@ -313,6 +402,15 @@
     <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script src="assets/js/translate.js"></script>
 
+    <script>
+    function copyPromoCode() {
+        const code = document.getElementById('promoCode').innerText;
+        navigator.clipboard.writeText(code);
+    }
+    function closePromoBar() {
+        document.getElementById('promo-bar').style.display = 'none';
+    }
+    </script>
 
 </body>
 </html> 
